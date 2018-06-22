@@ -43,6 +43,24 @@ it('concatenate multiple number button clicks', function(){
   assert.strictEqual(calculator.runningTotal, 111);
 })
 
+it('should be able to divide running total',function(){
+calculator.numberClick(6);
+calculator.operatorClick("/");
+calculator.numberClick(3);
+calculator.operatorClick("*");
+calculator.numberClick(10);
+calculator.operatorClick("+");
+calculator.numberClick(5);
+calculator.operatorClick("-");
+calculator.numberClick(1);
+calculator.operatorClick("=");
+// calculator.multiply(3);
+// calculator.add(10);
+// calculator.subtract(3);
+
+
+assert.strictEqual(calculator.runningTotal, 24);
+})
 
 
 });
