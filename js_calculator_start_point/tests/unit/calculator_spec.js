@@ -23,11 +23,16 @@ calculator.subtract(4);
 assert.strictEqual(calculator.runningTotal, 1);
 })
 
+it('should be able to multiply running total',function(){
+calculator.previousTotal = 5;
+calculator.multiply(4);
+assert.strictEqual(calculator.runningTotal, 20);
+})
+
 
 });
 
 
-// calculator.subtract()
 // calculator.multiply()
 // calculator.divide()
 // calculator.numberClick()
