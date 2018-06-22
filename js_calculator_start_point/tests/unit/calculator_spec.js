@@ -35,14 +35,14 @@ calculator.divide(7);
 assert.strictEqual(calculator.runningTotal, 3);
 })
 
-});
+it('concatenate multiple number button clicks', function(){
+  calculator.previousTotal = 0;
+  calculator.numberClick(1);
+  calculator.numberClick(1);
+  calculator.numberClick(1);
+  assert.strictEqual(calculator.runningTotal, 111);
+})
 
-// multiply 3x5 and get 15
-// divide 21/7 and get 3
-// add 1+4 and get 5
-// subtract 7-4 and get 3
-// calculator.multiply()
-// calculator.divide()
-// calculator.numberClick()
-// calculator.operatorClick()
-// calculator.clearClick()
+
+
+});
