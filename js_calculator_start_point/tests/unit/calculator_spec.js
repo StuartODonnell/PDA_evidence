@@ -17,9 +17,16 @@ describe('calculator', function () {
   assert.strictEqual(calculator.runningTotal, 6);
 })
 
+it('should be able to subtract from running total',function(){
+calculator.previousTotal = 5;
+calculator.subtract(4);
+assert.strictEqual(calculator.runningTotal, 1);
+})
+
+
 });
 
-// calculator.add()
+
 // calculator.subtract()
 // calculator.multiply()
 // calculator.divide()
