@@ -26,6 +26,17 @@ it ('should be able to add multiply 3x5 and get 15', function(){
 
 })
 
+it ('should be able to add divide 21 by 7 and get 3', function(){
+  running_total = element(by.css('#running_total'))
+  element(by.css('#number2')).click();
+  element(by.css('#number1')).click();
+  element(by.css('#operator_divide')).click();
+  element(by.css('#number7')).click();
+  element(by.css('#operator_equals')).click();
+  expect(running_total.getAttribute('value')).to.eventually.equal('3')
+
+})
+
 
 });
 
