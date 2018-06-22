@@ -16,7 +16,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
 
-it ('should be able to add multiply 3x5 and get 15', function(){
+it ('should be able to multiply 3x5 and get 15', function(){
   running_total = element(by.css('#running_total'))
   element(by.css('#number3')).click();
   element(by.css('#operator_multiply')).click();
@@ -26,7 +26,7 @@ it ('should be able to add multiply 3x5 and get 15', function(){
 
 })
 
-it ('should be able to add divide 21 by 7 and get 3', function(){
+it ('should be able to divide 21 by 7 and get 3', function(){
   running_total = element(by.css('#running_total'))
   element(by.css('#number2')).click();
   element(by.css('#number1')).click();
@@ -34,6 +34,16 @@ it ('should be able to add divide 21 by 7 and get 3', function(){
   element(by.css('#number7')).click();
   element(by.css('#operator_equals')).click();
   expect(running_total.getAttribute('value')).to.eventually.equal('3')
+
+})
+
+it ('should be able to add 1 and 4 and get 5', function(){
+  running_total = element(by.css('#running_total'))
+  element(by.css('#number1')).click();
+  element(by.css('#operator_add')).click();
+  element(by.css('#number4')).click();
+  element(by.css('#operator_equals')).click();
+  expect(running_total.getAttribute('value')).to.eventually.equal('5')
 
 })
 
