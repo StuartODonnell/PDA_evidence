@@ -47,7 +47,7 @@ it ('should be able to add 1 and 4 and get 5', function(){
 
 })
 
-it ('should be able to 4 from 7 and get 3', function(){
+it ('should be able to subtract 4 from 7 and get 3', function(){
   running_total = element(by.css('#running_total'))
   element(by.css('#number7')).click();
   element(by.css('#operator_subtract')).click();
@@ -57,10 +57,18 @@ it ('should be able to 4 from 7 and get 3', function(){
 
 })
 
+it ('should be able concatenate multiple number button clicks', function(){
+  running_total = element(by.css('#running_total'))
+  element(by.css('#number7')).click();
+  element(by.css('#number4')).click();
+  element(by.css('#number4')).click();
+  expect(running_total.getAttribute('value')).to.eventually.equal('744')
+
+})
+
 });
 
 
-// subtract 7-4 and get 3
 // concatenate multiple number button clicks
 // chain multiple operations together
 // clear the running total without affecting the calculation
