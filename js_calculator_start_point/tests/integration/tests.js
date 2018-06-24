@@ -78,16 +78,16 @@ it ('clear the running total without affecting the calculation', function(){
 
 })
 
+it('should return 0 if attempting to divide by 0', function(){
+  running_total = element(by.css('#running_total'))
+  element(by.css('#number7')).click();
+  element(by.css('#operator_divide')).click();
+  element(by.css('#number0')).click();
+  element(by.css('#operator_equals')).click();
+  expect(running_total.getAttribute('value')).to.eventually.equal('error: cannot divide by 0')
+
+
+
+})
+
 });
-
-
-// concatenate multiple number button clicks
-// chain multiple operations together
-// clear the running total without affecting the calculation
-// calculator.add()
-// calculator.subtract()
-// calculator.multiply()
-// calculator.divide()
-// calculator.numberClick()
-// calculator.operatorClick()
-// calculator.clearClick()
