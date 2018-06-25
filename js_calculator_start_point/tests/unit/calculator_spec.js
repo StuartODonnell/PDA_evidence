@@ -68,5 +68,12 @@ describe('calculator', function () {
     assert.strictEqual(calculator.runningTotal, 3);
   })
 
+  it('should return an error if trying to divide by 0', function(){
+    calculator.numberClick(6);
+    calculator.operatorClick("/");
+    calculator.numberClick(0);
+    calculator.operatorClick("=");
+    assert.strictEqual(calculator.runningTotal, "cannot divide by 0");
+  })
 
 });
